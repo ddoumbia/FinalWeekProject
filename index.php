@@ -19,7 +19,7 @@ include('includes/header.php');
                 <div class="card-body">
                     <h5 class="card-title">Pets</h5>
                     <p class="card-text">View and manage your pets.</p>
-                    <a href="/pets/index.php" class="btn btn-primary">View Pets</a>
+                    <a href="./pets/index.php" class="btn btn-primary">View Pets</a>
                 </div>
             </div>
         </div>
@@ -29,7 +29,7 @@ include('includes/header.php');
                 <div class="card-body">
                     <h5 class="card-title">Posts</h5>
                     <p class="card-text">Read and share posts.</p>
-                    <a href="/posts/index.php" class="btn btn-secondary">View Posts</a>
+                    <a href="./posts/index.php" class="btn btn-secondary">View Posts</a>
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@ include('includes/header.php');
                 <div class="card-body">
                     <h5 class="card-title">Pages</h5>
                     <p class="card-text">Explore static pages.</p>
-                    <a href="/pages/index.php" class="btn btn-info">View Pages</a>
+                    <a href="./pages/index.php" class="btn btn-info">View Pages</a>
                 </div>
             </div>
         </div>
@@ -49,10 +49,10 @@ include('includes/header.php');
 <!-- Authentication Buttons -->
 <div class="text-center mt-4">
     <?php if(!isset($_SESSION['user_id'])): ?>
-        <a href="/register.php" class="btn btn-success mr-2">Register</a>
-        <a href="/login.php" class="btn btn-outline-primary">Login</a>
+        <a href="./register.php" class="btn btn-success mr-2">Register</a>
+        <a href="./login.php" class="btn btn-outline-primary">Login</a>
     <?php else: ?>
-        <a href="/logout.php" class="btn btn-danger">Logout</a>
+        <a href="./logout.php" class="btn btn-danger">Logout</a>
     <?php endif; ?>
 </div>
 
