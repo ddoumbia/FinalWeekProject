@@ -1,3 +1,4 @@
+<base href="/FinalWeekProject/">
 <?php
 include('../includes/header.php');
 include('../includes/auth.php');
@@ -43,7 +44,7 @@ if (!empty($errors)) {
     echo '</ul></div>';
 }
 ?>
-<form method="post" action="create.php">
+<form method="post" action="./pets/create.php">
     <div class="form-group">
         <label for="name">Pet Name:</label>
         <input type="text" name="name" id="name" class="form-control" value="<?php echo htmlspecialchars($name); ?>" required>
