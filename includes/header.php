@@ -7,11 +7,12 @@ include('db_connect.php');
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <base href="/FinalWeekProject/">
     <title>Group 3 Application</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
 <!-- Navigation Bar -->
