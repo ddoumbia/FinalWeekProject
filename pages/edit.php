@@ -1,3 +1,4 @@
+<base href="/FinalWeekProject/">
 <?php
 include('../includes/header.php');
 include('../includes/auth.php');
@@ -72,7 +73,7 @@ if (!empty($errors)) {
     echo '</ul></div>';
 }
 ?>
-<form method="post" action="edit.php">
+<form method="post" action="./pages/edit.php">
     <input type="hidden" name="page_id" value="<?php echo htmlspecialchars($page_id); ?>">
     <div class="form-group">
         <label for="title">Title:</label>
