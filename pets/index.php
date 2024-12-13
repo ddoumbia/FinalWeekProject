@@ -5,9 +5,10 @@ include('../includes/header.php');
 $sql = "SELECT p.*, u.username FROM Pet p JOIN User u ON p.owner_id = u.user_id";
 $result = $conn->query($sql);
 ?>
+<base href="/FinalWeekProject/">
 <h2>All Pets</h2>
 <?php if(isset($_SESSION['user_id'])): ?>
-    <a href="create.php" class="btn btn-primary">Add New Pet</a>
+    <a href="./pets/create.php" class="btn btn-primary">Add New Pet</a>
 <?php endif; ?>
 <table class="table table-striped mt-3">
     <thead>
@@ -24,14 +25,14 @@ $result = $conn->query($sql);
     <tbody>
         <?php while ($pet = $result->fetch_assoc()): ?>
         <tr>
-            <td><a href="view.php?id=<?php echo $pet['pet_id']; ?>"><?php echo htmlspecialchars($pet['name']); ?></a></td>
+            <td><a href="./pets/view.php?id=<?php echo $pet['pet_id']; ?>"><?php echo htmlspecialchars($pet['name']); ?></a></td>
             <td><?php echo htmlspecialchars($pet['species']); ?></td>
             <td><?php echo htmlspecialchars($pet['age']); ?></td>
             <td><?php echo htmlspecialchars($pet['username']); ?></td>
             <?php if (isset($_SESSION['user_id']) && ($_SESSION['user_id'] == $pet['owner_id'] || $_SESSION['is_admin'])): ?>
             <td>
-                <a href="edit.php?id=<?php echo $pet['pet_id']; ?>" class="btn btn-warning btn-sm">Edit</a>
-                <a href="delete.php?id=<?php echo $pet['pet_id']; ?>" class="btn btn-danger btn-sm">Delete</a>
+                <a href="./pets/edit.php?id=<?php echo $pet['pet_id']; ?>" class="btn btn-warning btn-sm">Edit</a>
+                <a href="./pets/delete.php?id=<?php echo $pet['pet_id']; ?>" class="btn btn-danger btn-sm">Delete</a>
             </td>
             <?php endif; ?>
         </tr>
