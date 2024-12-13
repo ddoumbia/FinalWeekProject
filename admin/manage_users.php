@@ -1,3 +1,4 @@
+<base href="/FinalWeekProject/">
 <?php
 include('../includes/header.php');
 include('../includes/auth.php');
@@ -27,9 +28,7 @@ $result = $stmt->get_result();
             <td><?php echo htmlspecialchars($user['email']); ?></td>
             <td><?php echo $user['is_admin'] ? 'Yes' : 'No'; ?></td>
             <td>
-                <a href="edit_user.php?id=<?php echo $user['user_id']; ?>" class="btn btn-warning btn-sm">Edit</a>
-                <?php if ($user['user_id'] != $_SESSION['user_id']): ?>
-                <a href="delete_user.php?id=<?php echo $user['user_id']; ?>" class="btn btn-danger btn-sm">Delete</a>
+                <a href="./admin/edit_user.php?id=<?php echo $user['user_id']; ?>" class="btn btn-warning btn-sm">Edit</a>
                 <?php endif; ?>
             </td>
         </tr>
