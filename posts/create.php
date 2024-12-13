@@ -1,3 +1,4 @@
+<base href="/FinalWeekProject/">
 <?php
 include('../includes/header.php');
 include('../includes/auth.php');
@@ -41,7 +42,7 @@ if (!empty($errors)) {
     echo '</ul></div>';
 }
 ?>
-<form method="post" action="create.php">
+<form method="post" action="./posts/create.php">
     <div class="form-group">
         <label for="title">Title:</label>
         <input type="text" name="title" id="title" class="form-control" value="<?php echo htmlspecialchars($title); ?>" required>
