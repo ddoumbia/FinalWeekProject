@@ -59,6 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 <h2>Edit Post</h2>
+<base href="/FinalWeekProject/">
 <?php
 if (!empty($errors)) {
     echo '<div class="alert alert-danger"><ul>';
@@ -68,7 +69,7 @@ if (!empty($errors)) {
     echo '</ul></div>';
 }
 ?>
-<form method="post" action="edit.php?id=<?php echo $post_id; ?>">
+<form method="post" action="./posts/edit.php?id=<?php echo $post_id; ?>">
     <div class="form-group">
         <label for="title">Title:</label>
         <input type="text" name="title" id="title" class="form-control" value="<?php echo htmlspecialchars($title); ?>" required>
