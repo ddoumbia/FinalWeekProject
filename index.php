@@ -1,7 +1,7 @@
 <?php
 include('includes/header.php');
 ?>
-
+<base href="/FinalWeekProject/">
 <!-- Jumbotron for a prominent welcome message -->
 <div class="jumbotron text-center">
     <h1 class="display-4">Welcome to Group 3 Application</h1>
