@@ -1,3 +1,4 @@
+<base href="/FinalWeekProject/">
 <?php
 include('../includes/header.php');
 include('../includes/auth.php');
@@ -72,7 +73,7 @@ if (!empty($errors)) {
     echo '</ul></div>';
 }
 ?>
-<form method="post" action="edit_user.php?id=<?php echo $user_id; ?>">
+<form method="post" action="./admin/edit_user.php?id=<?php echo $user_id; ?>">
     <div class="form-group">
         <label for="username">Username:</label>
         <input type="text" name="username" id="username" class="form-control" value="<?php echo htmlspecialchars($username); ?>" required>
