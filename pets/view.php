@@ -1,3 +1,4 @@
+<base href="/FinalWeekProject/">
 <?php
 include('../includes/header.php');
 
@@ -29,8 +30,8 @@ $pet = $result->fetch_assoc();
 <?php
 if (isset($_SESSION['user_id']) && ($_SESSION['user_id'] == $pet['owner_id'] || $_SESSION['is_admin'])):
 ?>
-    <a href="edit.php?id=<?php echo $pet['pet_id']; ?>" class="btn btn-warning">Edit</a>
-    <a href="delete.php?id=<?php echo $pet['pet_id']; ?>" class="btn btn-danger">Delete</a>
+    <a href="./pets/edit.php?id=<?php echo $pet['pet_id']; ?>" class="btn btn-warning">Edit</a>
+    <a href="./pets/delete.php?id=<?php echo $pet['pet_id']; ?>" class="btn btn-danger">Delete</a>
 <?php
 endif;
 include('../includes/footer.php');
