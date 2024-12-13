@@ -1,3 +1,4 @@
+<base href="/FinalWeekProject/">
 <?php
 include('../includes/header.php');
 
@@ -28,8 +29,8 @@ $post = $result->fetch_assoc();
 <?php
 if (isset($_SESSION['user_id']) && ($_SESSION['user_id'] == $post['author_id'] || $_SESSION['is_admin'])):
 ?>
-    <a href="edit.php?id=<?php echo $post['post_id']; ?>" class="btn btn-warning">Edit</a>
-    <a href="delete.php?id=<?php echo $post['post_id']; ?>" class="btn btn-danger">Delete</a>
+    <a href="./posts/edit.php?id=<?php echo $post['post_id']; ?>" class="btn btn-warning">Edit</a>
+    <a href="./posts/delete.php?id=<?php echo $post['post_id']; ?>" class="btn btn-danger">Delete</a>
 <?php
 endif;
 include('../includes/footer.php');
