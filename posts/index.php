@@ -8,7 +8,7 @@ $result = $conn->query($sql);
 <base href="/FinalWeekProject/">
 <h2>All Posts</h2>
 <?php if(isset($_SESSION['user_id'])): ?>
-    <a href="create.php" class="btn btn-primary">Create New Post</a>
+    <a href="./posts/create.php" class="btn btn-primary">Create New Post</a>
 <?php endif; ?>
 <div class="list-group mt-3">
     <?php while ($post = $result->fetch_assoc()): ?>
